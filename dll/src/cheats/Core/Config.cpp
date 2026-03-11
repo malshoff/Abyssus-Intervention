@@ -53,8 +53,7 @@ namespace Cheat {
 
             // Aim target selection default
             AimTarget aimTarget = AimTarget::Bones;
-            // Initial vertical aim offset
-            float aimVerticalOffset = 0.0f;
+
 
 
             // Visual settings
@@ -68,8 +67,7 @@ namespace Cheat {
         }
 
         namespace Debug {
-            bool enableMathLogging = false; // existing extern
-            std::string playerAimOriginBone; // empty by default
+            bool enableMathLogging = false;
         }
 
         // =============================================================================

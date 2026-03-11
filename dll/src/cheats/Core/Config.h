@@ -91,8 +91,6 @@ namespace Cheat {
             extern AimTarget aimTarget;
 
 
-            // User-tunable vertical aim offset (world Z units, positive aims higher)
-            extern float aimVerticalOffset;
 
 
 
@@ -119,8 +117,6 @@ namespace Cheat {
 
         namespace Debug {
             extern bool enableMathLogging;
-            // For debug-aiming: user-selected bone name on local player to use as aim origin
-            extern std::string playerAimOriginBone; // empty = auto (head)
         }
 
         // =============================================================================

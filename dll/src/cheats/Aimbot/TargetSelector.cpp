@@ -64,11 +64,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         if (Cheat::Config::Aimbot::aimTarget == Cheat::Config::Aimbot::AimTarget::Center) {
             if (auto enemyPawn = static_cast<SDK::AREnemyPawnBase*>(actor)) {
                 if (auto capsule = enemyPawn->CapsuleComponent) {
-                    SDK::FVector center = capsule->K2_GetComponentLocation();
-                    // small upward bias can help aim center mass slightly above center for visibility
-                    SDK::FVector up = capsule->GetUpVector();
-                    float hh = capsule->GetScaledCapsuleHalfHeight();
-                    targetInfo.aimPoint = center + up * (hh * 0.1f);
+                    targetInfo.aimPoint = capsule->K2_GetComponentLocation();
                     targetInfo.hasBoneTarget = false;
                 }
             }
@@ -245,12 +241,14 @@ SDK::FVector TargetSelector::GetTargetAimPoint(SDK::AActor* targetActor) {
         return SDK::FVector();
     }
 
-    SDK::FVector actorLocation = targetActor->K2_GetActorLocation();
+    // Use capsule center as fallback — works regardless of enemy size
+    if (auto enemy = static_cast<SDK::AREnemyPawnBase*>(targetActor)) {
+        if (auto capsule = enemy->CapsuleComponent) {
+            return capsule->K2_GetComponentLocation();
+        }
+    }
 
-    // Try to aim for the head/upper body by adding some height offset
-    actorLocation.Z += 10.0f; // Approximate head height offset
-
-    return actorLocation;
+    return targetActor->K2_GetActorLocation();
 }
 
 float TargetSelector::CalculateTargetPriority(const TargetInfo& target, const SDK::FVector& playerPos) {

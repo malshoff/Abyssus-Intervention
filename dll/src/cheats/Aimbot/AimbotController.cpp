@@ -7,8 +7,6 @@
 #include <dev/logger.h>
 #include "../Analysis/BoneAnalyzer.h"
 
-#include "../Services/PlayerBoneService.h"
-
 #include <Windows.h>
 #include <iomanip>
 
@@ -174,57 +172,20 @@ void AimbotController::ProcessAiming(SDK::UWorld *world,
 
         SDK::FVector targetPosition = Cheat::Config::GameState::g_CurrentTargetInfo.aimPoint;
 
+        // Get the camera position — this is the exact point we're "aiming from"
+        // Professional UE aimbots always use the camera as the origin, never a bone
         SDK::FVector cameraPos;
-        bool originSet = false;
-
-        SDK::USkeletalMeshComponent *pMesh = playerPawn->GetSkeletalMeshComponent();
-        if (pMesh)
+        if (playerController->PlayerCameraManager)
         {
-            // Cache Foot_l FName once per player pawn and reuse
-            static SDK::ARPlayerPawn *sCachedPawn = nullptr;
-            static bool sResolved = false;
-            static bool sFound = false;
-            static SDK::FName sFootL;
-
-            if (playerPawn != sCachedPawn || !sResolved)
-            {
-                sCachedPawn = playerPawn;
-                sResolved = true;
-                sFound = false;
-
-                int boneCount = pMesh->GetNumBones();
-                for (int i = 0; i < boneCount; ++i)
-                {
-                    SDK::FName bn = pMesh->GetBoneName(i);
-                    auto s = bn.ToString();
-                    if (_stricmp(s.c_str(), "Foot_l") == 0)
-                    {
-                        sFootL = bn;
-                        sFound = true;
-                        break;
-                    }
-                }
-            }
-
-            if (sFound)
-            {
-                cameraPos = pMesh->GetSocketLocation(sFootL);
-            }
-            else
-            {
-                cameraPos = pMesh->K2_GetComponentLocation();
-            }
-            originSet = true;
+            cameraPos = playerController->PlayerCameraManager->GetCameraLocation();
         }
-
-        if (!originSet)
+        else
         {
+            // Fallback (should never happen in practice)
             SDK::FRotator cameraRot;
             playerController->GetActorEyesViewPoint(&cameraPos, &cameraRot);
         }
 
-        // Apply user-configurable vertical offset (world Z axis)
-        targetPosition.Z += Cheat::Config::Aimbot::aimVerticalOffset;
         SDK::FRotator targetRotation = Math::CalculateLookAtRotation(cameraPos, targetPosition);
         SDK::FRotator currentRotation = playerController->K2_GetActorRotation();
 

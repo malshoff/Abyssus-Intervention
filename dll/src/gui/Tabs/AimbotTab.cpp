@@ -36,12 +36,7 @@ void AimbotTab() {
         LOG_INFO("GUI: Aimbot aim target set to %s", aimTarget == 0 ? "bones" : "center");
     }
 
-    ImGui::Spacing();
-    ImGui::Text("Vertical Aim Offset");
-    ImGui::SameLine();
-    if (ImGui::SliderFloat("##aim_vert_offset", &Cheat::Config::Aimbot::aimVerticalOffset, -100.0f, 100.0f, "%.1f")) {
-        LOG_INFO("GUI: Aimbot vertical offset = %.1f", Cheat::Config::Aimbot::aimVerticalOffset);
-    }
+
 
 
     ImGui::Spacing();

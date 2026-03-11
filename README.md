@@ -49,21 +49,7 @@ cd ImGui-DirectX-12-Kiero-Hook
 2. Build using presets:
 
 ```bash
-# For VS2019 Release
-cmake --preset windows-x64-release-2019
-cmake --build --preset windows-x64-release-2019
-
-# For VS2019 Debug
-cmake --preset windows-x64-debug-2019
-cmake --build --preset windows-x64-debug-2019
-
-# For VS2022 Release
-cmake --preset windows-x64-release-2022
 cmake --build --preset windows-x64-release-2022
-
-# For VS2022 Debug
-cmake --preset windows-x64-debug-2022
-cmake --build --preset windows-x64-debug-2022
 ```
 
 The DLL will be in the `bin/{Debug|Release}` directory.
